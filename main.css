@@ -53,21 +53,28 @@ header {
     color: #333;
     text-align: center;
     padding: 1px;
+    clear: both;
+    padding-bottom: 12px;
+}
+
+#fun-fact ol {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    justify-self: center;
 }
 
 .image_float_left_in_section {
     float: left;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
-.image_50 {
-    aspect-ratio: 1/1;
-    width: 50%;
+.image_100 {
+    width: 100px;
     height: auto;
 }
 
-.image_10 {
-    aspect-ratio: 1/1;
-    width: 10%;
+.image_250 {
+    width: 250px;
     height: auto;
 }
