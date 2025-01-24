@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact - Kansas</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>🌻 Welcome to Kansas! 🌻</h1>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="topeka.html">Topeka</a></li>
+                <li><a href="wichita.html">Wichita</a></li>
+                <li><a href="overlandpark.html">Overland Park</a></li>
+                <li><a class="active" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section>
+        <div class="image_float_left_in_section">
+            <img src="img/Sunflowers_Jason_Soden_dab1e236-ec61-4e07-a377-7ea1e69ae35d.jpg" alt="A beautiful field of sunflowers" class="image_250">
+            <p><small>Photo: <a href="https://www.travelks.com/blog/stories/post/where-to-experience-the-best-of-kansas/" target="_blank">travelks.com</a></small></p>
+        </div>
+        <h2>Contact Us!</h2>
+        <p>This form will allow you to send us an Internet message.</p>
+        <form id="contact_form" action="#">
+            <label for="first_name">First Name:</label>
+            <input type="text" name="first_name" placeholder="First Name" required>
+            <label for="last_name">Last Name:</label>
+            <input type="text" name="last_name" placeholder="Last Name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" name="email" placeholder="Email" required>
+
+            <label for="confirm_email">Confirm Email:</label>
+            <input type="email" name="confirm_email" placeholder="Confirm Email" required>
+
+            <label for="message">Message:</label>
+            <textarea name="message" placeholder="Message" required></textarea>
+
+            <input type="submit" value="Send">
+        </form>
+        <aside id="fun-fact">
+            <h3>Contacting us?</h3>
+            <p>The form isn't hooked up to a server yet, so it will just go off into the void. 😂</p>
+        </aside>
+    </section>
+
+    <script>
+        document.getElementById('contact_form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            if (document.querySelector('input[name="email"]').value !== document.querySelector('input[name="confirm_email"]').value) {
+                alert('Emails do not match!');
+
+                document.querySelector('input[name="email"]').focus();
+                return;
+            }
+
+            alert('Thanks for your message!');
+
+            document.getElementById('contact_form').reset();
+        });
+    </script>
+</body>
+</html>
