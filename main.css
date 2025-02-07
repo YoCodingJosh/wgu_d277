@@ -191,6 +191,7 @@ textarea {
   
 .submit_button {
     position: relative;
+    left: 33.3333%;
     display: inline-block;
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     color: #fff;
